@@ -1,0 +1,23 @@
+{
+    "name": "php-value-object/temperature",
+    "description": "Temperature ValueObject for PHP. Easy to use with implementation of Kelvin, Celsius and Fahrenheit",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "phpstan/phpstan-shim": "^0.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Hlavac",
+            "email": "public@mhlavac.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "PHPValueObject\\Temperature\\": "src",
+            "PHPValueObject\\Temperature\\Tests\\": "tests"
+        }
+    }
+}
