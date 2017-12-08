@@ -1,8 +1,8 @@
 # Temperature Value Objects
 
-[![Build Status](https://travis-ci.org/pPHPValueObject/Temperature.svg)](https://travis-ci.org/PHPValueObject/Temperature)
-[![Latest Stable Version](https://poser.pugx.org/PHPValueObject/Temperature/v/stable)](https://packagist.org/packages/phpvalueobject/temperature)
-[![License](https://poser.pugx.org/PHPValueObject/Temperature/license)](https://packagist.org/packages/phpvalueobject/temperature)
+[![Build Status](https://travis-ci.org/PHPValueObject/Temperature.svg)](https://travis-ci.org/PHPValueObject/Temperature)
+[![Latest Stable Version](https://poser.pugx.org/php-value-object/temperature/v/stable)](https://packagist.org/packages/php-value-object/temperature)
+[![License](https://poser.pugx.org/php-value-object/temperature/license)](https://packagist.org/packages/php-value-object/temperature)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpvalueobject/temperature)
 
 This repository provides Temperature ValueObject implementation for PHP that is easy to use and easily allow your classes to
