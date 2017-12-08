@@ -2,6 +2,9 @@
     "name": "php-value-object/temperature",
     "description": "Temperature ValueObject for PHP. Easy to use with implementation of Kelvin, Celsius and Fahrenheit",
     "type": "library",
+    "require": {
+        "php": ">=7.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "^6.5",
         "phpstan/phpstan-shim": "^0.9"
