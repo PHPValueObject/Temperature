@@ -19,14 +19,31 @@ You can install this package via composer
 ``` php
 function isItWarm(Temperature $temperature) : bool
 {
-    $celsius = new Celsius($temperature);
-
-    return $celsius->getValue() > 23;
+    $hot = new Celsius(23);
+    if($temperature->gte($hot)) {
+      return true; // t-shirt time
+    }
+    
+    return false; // jacket time
 }
 
 $temperature = new Kelvin(0);
 isItWarm($temperature); // false
 ```
+
+## Usage
+
+The temperature classes are supported: `Celsius`, `Fahrenheit` and `Kelvin`.
+
+It is possible to compare them via helper methods:
+* `eq` - equals
+* `gt` - greater than
+* `gte` - greater than or equals
+* `lt` - less than
+* `lte` - less than or equals
+* `compareTo` - returns -1, 0, 1 if less than, equal or greater than
+
+To introduce new temperature class simply extend Temperature.
 
 ## Licence
 

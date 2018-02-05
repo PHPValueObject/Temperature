@@ -47,4 +47,54 @@ class TemperatureTest extends TestCase
 
         $this->assertSame(0, $kelvin1->compareTo($kelvin2));
     }
+
+    public function testEq()
+    {
+        $kelvin1 = new Kelvin(0);
+        $kelvin2 = new Kelvin(0);
+        $kelvin3 = new Kelvin(1);
+
+        $this->assertTrue($kelvin1->eq($kelvin2));
+        $this->assertFalse($kelvin1->eq($kelvin3));
+    }
+
+    public function testGt()
+    {
+        $kelvin1 = new Kelvin(1);
+        $kelvin2 = new Kelvin(0);
+
+        $this->assertTrue($kelvin1->gt($kelvin2));
+        $this->assertFalse($kelvin1->gt($kelvin1));
+        $this->assertFalse($kelvin2->gt($kelvin1));
+    }
+
+    public function testGte()
+    {
+        $kelvin1 = new Kelvin(1);
+        $kelvin2 = new Kelvin(0);
+
+        $this->assertTrue($kelvin1->gte($kelvin2));
+        $this->assertTrue($kelvin1->gte($kelvin1));
+        $this->assertFalse($kelvin2->gte($kelvin1));
+    }
+
+    public function testLt()
+    {
+        $kelvin1 = new Kelvin(1);
+        $kelvin2 = new Kelvin(0);
+
+        $this->assertFalse($kelvin1->lt($kelvin2));
+        $this->assertFalse($kelvin1->lt($kelvin1));
+        $this->assertTrue($kelvin2->lt($kelvin1));
+    }
+
+    public function testLte()
+    {
+        $kelvin1 = new Kelvin(1);
+        $kelvin2 = new Kelvin(0);
+
+        $this->assertFalse($kelvin1->lte($kelvin2));
+        $this->assertTrue($kelvin1->lte($kelvin1));
+        $this->assertTrue($kelvin2->lte($kelvin1));
+    }
 }

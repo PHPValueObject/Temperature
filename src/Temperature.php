@@ -37,6 +37,31 @@ abstract class Temperature
 
     public function compareTo(Temperature $temperature) : int
     {
-        return $this->getKelvinValue()  <=> $temperature->getKelvinValue();
+        return $this->getKelvinValue() <=> $temperature->getKelvinValue();
+    }
+
+    public function eq(Temperature $temperature) : bool
+    {
+        return $this->getKelvinValue() === $temperature->getKelvinValue();
+    }
+
+    public function gt(Temperature $temperature) : bool
+    {
+        return $this->getKelvinValue() > $temperature->getKelvinValue();
+    }
+
+    public function gte(Temperature $temperature) : bool
+    {
+        return $this->getKelvinValue() >= $temperature->getKelvinValue();
+    }
+
+    public function lt(Temperature $temperature) : bool
+    {
+        return $this->getKelvinValue() < $temperature->getKelvinValue();
+    }
+
+    public function lte(Temperature $temperature) : bool
+    {
+        return $this->getKelvinValue() <= $temperature->getKelvinValue();
     }
 }
